@@ -1,4 +1,38 @@
-/* 
-    Put your custom SCSS here! 
-    This allows you to override any CollectionBuilder or Bootstrap CSS without modifying the base theme files directly.
-*/
+/* --- Tarihi Eskitme ve Renk Yumuşatma --- */
+body {
+    background-color: #f5f0e8 !important; /* Saf beyaz yerine kağıt rengi */
+    color: #2C1810 !important; /* Yazıları koyu kahve yaparak yumuşatıyoruz */
+}
+
+.navbar {
+    background-color: #8B0000 !important; /* Navbar tam bordo */
+    border-bottom: 3px solid #D4A017 !important; /* Altına altın rengi bir çizgi */
+}
+
+.card {
+    background-color: #fffaf0 !important; /* Kartların içi hafif krem */
+    border: 1px solid #dcd0c0 !important; /* Kenarlıklar daha yumuşak */
+}
+
+.btn-primary, .btn-success {
+    background-color: #8B0000 !important;
+    border-color: #700000 !important;
+    color: #ffffff !important;
+}
+
+.btn-outline-primary, .btn-outline-secondary {
+    color: #8B0000 !important;
+    border-color: #8B0000 !important;
+}
+
+/* Başlıkları daha belirgin ve tarihi yapalım */
+h1, h2, h3, .h1, .h2, .h3 {
+    color: #8B0000 !important;
+    font-family: serif !important; /* Daha klasik bir yazı tipi */
+}
+
+/* Tablo ve liste başlıklarını yumuşatalım */
+.table {
+    --bs-table-bg: transparent;
+    color: #2C1810;
+}
