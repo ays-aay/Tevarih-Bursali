@@ -30,25 +30,16 @@ $theme-colors: map-merge(
 @import "base", "pages", "custom";
 
 body {
-  position: relative;
-  z-index: 0;
+  background-color: #f5f0e8;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-background-image: url('/Tevarih/assets/img/background.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  filter: blur(3px) brightness(0.95);
-  z-index: -1;
+#home-banner {
+  background-image: url('/Tevarih/assets/img/background.jpg') !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center top !important;
 }
 
 .card {
-  background-color: rgba(255, 255, 255, 0.88);
+  background-color: rgba(255, 255, 255, 0.95);
 }
