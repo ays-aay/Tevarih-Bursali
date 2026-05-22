@@ -1,34 +1,81 @@
-{%- assign formats = site.data[site.metadata] | where_exp: 'item','item.parentid == nil' | map: "format" -%}
-{%- assign types = "image;audio;video;pdf;record;compound_object;multiple" | split: ";" -%}
-<div class="card mb-3" >
-    <div class="card-body">
-        <h5 class="card-title">Objects</h5>
-        <p class="card-text">
-            {% for t in types %}
-            {%- assign count = formats | where_exp: 'item','item contains t' | size -%}
-            {% if count > 0 %}
-            {{ count }}
-            {% case t %}
-            {% when 'image' %} 
-            <a class="text-dark" href="{{ 'image' | prepend: '/browse.html#' | relative_url }}">Image{% if count > 1 %}s{% endif %} <svg class="bi icon-sprite text-body" fill="currentColor" aria-hidden="true"><use xlink:href="{{ '/assets/lib/cb-icons.svg' | relative_url }}#icon-image"/></svg></a><br>
-            {% when 'audio' %}
-            <a class="text-dark" href="{{ 'audio' | prepend: '/browse.html#' | relative_url }}">Audio File{% if count > 1 %}s{% endif %} <svg class="bi icon-sprite text-body" fill="currentColor" aria-hidden="true"><use xlink:href="{{ '/assets/lib/cb-icons.svg' | relative_url }}#icon-audio"/></svg></a><br>
-            {% when 'video' %}
-            <a class="text-dark" href="{{ 'video' | prepend: '/browse.html#' | relative_url }}">Video{% if count > 1 %}s{% endif %} <svg class="bi icon-sprite text-body" fill="currentColor" aria-hidden="true"><use xlink:href="{{ '/assets/lib/cb-icons.svg' | relative_url }}#icon-video"/></svg></a><br>
-            {% when 'pdf' %}
-            <a class="text-dark" href="{{ 'pdf' | prepend: '/browse.html#' | relative_url }}">PDF{% if count > 1 %}s{% endif %} <svg class="bi icon-sprite text-body" fill="currentColor" aria-hidden="true"><use xlink:href="{{ '/assets/lib/cb-icons.svg' | relative_url }}#icon-pdf"/></svg></a><br>
-            {% when 'record' %}
-            <a class="text-dark" href="{{ 'record' | prepend: '/browse.html#' | relative_url }}">Record{% if count > 1 %}s{% endif %} <svg class="bi icon-sprite text-body" fill="currentColor" aria-hidden="true"><use xlink:href="{{ '/assets/lib/cb-icons.svg' | relative_url }}#icon-record"/></svg></a><br>
-            {% when 'compound_object' %}
-            <a class="text-dark" href="{{ 'compound_object' | prepend: '/browse.html#' | relative_url }}">Compound Object{% if count > 1 %}s{% endif %} <svg class="bi icon-sprite text-body" fill="currentColor" aria-hidden="true"><use xlink:href="{{ '/assets/lib/cb-icons.svg' | relative_url }}#icon-compound-object"/></svg></a><br>
-            {% when 'multiple' %}
-            <a class="text-dark" href="{{ 'multiple' | prepend: '/browse.html#' | relative_url }}">Multiple{% if count > 1 %}s{% endif %} <svg class="bi icon-sprite text-body" fill="currentColor" aria-hidden="true"><use xlink:href="{{ '/assets/lib/cb-icons.svg' | relative_url }}#icon-multiple"/></svg></a><br>
-            {% else %}
-            <a class="text-dark" href="{{ 'pdf' | prepend: '/browse.html#' | relative_url }}">File{% if count > 1 %}s{% endif %} <svg class="bi icon-sprite text-body" fill="currentColor" aria-hidden="true"><use xlink:href="{{ '/assets/lib/cb-icons.svg' | relative_url }}#icon-default"/></svg></a><br>
-            {% endcase %}
-            {% endif %}
-            {%- endfor -%}
-            <a class="btn btn-sm btn-outline-secondary mt-2" href="{{ '/data.html' | relative_url }}">View table</a>
-        </p>
+{%- assign items = site.data[site.metadata] -%}
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="card my-3 p-3 bg-light shadow-sm">
+            <h3 class="h5 mb-3">Arama ve Filtreler</h3>
+            
+            <div class="mb-4">
+                <label for="quicksearch" class="form-label fw-bold">Metin Arama</label>
+                <input type="text" class="form-control" id="quicksearch" placeholder="Eser adı, müellif ara...">
+                <button class="btn btn-primary w-100 mt-2" onclick="searchItems()">Ara</button>
+                <button class="btn btn-outline-secondary w-100 mt-1" onclick="resetSearch()">Temizle</button>
+            </div>
+            
+            <div class="mb-4">
+                <label for="sort-select" class="form-label fw-bold">Sıralama</label>
+                <select class="form-select" id="sort-select" onchange="sortItems()">
+                    <option value="random">Rastgele</option>
+                    <option value="title">Müellif Adı</option>
+                    <option value="eser_adi">Eser Adı</option>
+                    <option value="telif_tarih_miladi">Tarih</option>
+                </select>
+            </div>
+
+            <hr>
+
+            <div class="mb-3">
+                <label class="form-label fw-bold" for="filter-muellif">Müellif Adı</label>
+                {% assign unique_muellif = items | map: 'muellif_adi' | uniq | compact | sort %}
+                <select class="form-select facet-select" id="filter-muellif" data-field="muellif_adi" onchange="filterItems()">
+                    <option value="">Tümü</option>
+                    {% for v in unique_muellif %}
+                    <option value="{{ v }}">{{ v }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-bold" for="filter-padisah">Padişah Dönemi</label>
+                {% assign unique_padisah = items | map: 'padisah_donemi' | uniq | compact | sort %}
+                <select class="form-select facet-select" id="filter-padisah" data-field="padisah_donemi" onchange="filterItems()">
+                    <option value="">Tümü</option>
+                    {% for v in unique_padisah %}
+                    <option value="{{ v }}">{{ v }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-bold" for="filter-alttur">Eser Alt Türü</label>
+                {% assign unique_alttur = items | map: 'eser_alt_turu' | uniq | compact | sort %}
+                <select class="form-select facet-select" id="filter-alttur" data-field="eser_alt_turu" onchange="filterItems()">
+                    <option value="">Tümü</option>
+                    {% for v in unique_alttur %}
+                    <option value="{{ v }}">{{ v }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-bold" for="filter-kutuphane">Kütüphane / Koleksiyon</label>
+                {% assign unique_kutupane = items | map: 'kutupane_koleksiyon' | uniq | compact | sort %}
+                <select class="form-select facet-select" id="filter-kutuphane" data-field="kutupane_koleksiyon" onchange="filterItems()">
+                    <option value="">Tümü</option>
+                    {% for v in unique_kutupane %}
+                    <option value="{{ v }}">{{ v }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+        </div>
+    </div>
+    
+    <div class="col-md-9">
+        <div class="d-flex justify-content-between align-items-center my-3">
+            <span id="item-count" class="h4">Yükleniyor...</span>
+        </div>
+        <div id="browse-items" class="row">
+            </div>
     </div>
 </div>
