@@ -1,6 +1,5 @@
-field,display_name,btn,hidden,sort_name
-muellif_adi,Müellif,,,Müellif
-title,Eser Adı,,,Eser Adı
-telif_tarih_miladi,Telif Tarihi,,,Tarih
-muellif_olum_tarihi,Müellif Ölüm Tarihi,,,
-padisah_donemi,Padişah Dönemi,,,
+field,display_name,btn
+eser_adi,Eser Adı,true
+date,Tarih,true
+muellif_olum_tarihi,Müellif Ölüm Tarihi,true
+padisah_donemi,Padişah Dönemi,true
