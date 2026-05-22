@@ -61,6 +61,7 @@ year-nav-increment: 5 # set increments when auto gen nav years
 # comma delimited list, reference url is automatic
 metadata-export-fields: "title,eser_adi,telif_tarih_miladi,muellif_olum_tarihi,padisah_donemi,eser_alt_turu,kutupane_koleksiyon"
 metadata-facets-fields: "muellif_adi,padisah_donemi,eser_alt_turu,kutupane_koleksiyon"
+sort-buttons: "Müellif Adı;title;Eser Adı;eser_adi;Tarih;date"
 
 ##########
 # COMPOUND OBJECTS
