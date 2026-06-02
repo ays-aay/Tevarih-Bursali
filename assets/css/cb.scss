@@ -29,10 +29,12 @@ $theme-colors: map-merge(
 {% endif %}
 @import "base", "pages", "custom";
 
+/* --- Arka plan --- */
 body {
   background-color: #f5f0e8;
 }
 
+/* --- Banner --- */
 #home-banner {
   background-image: url('/Tevarih/assets/img/background.jpg') !important;
   background-size: cover !important;
@@ -40,10 +42,44 @@ body {
   background-position: center top !important;
 }
 
+/* --- Kartlar --- */
 .card {
   background-color: rgba(255, 255, 255, 0.95);
 }
+
+/* --- Navbar linkleri --- */
 .navbar-nav .nav-link {
     color: rgba(255, 255, 255, 0.85) !important;
     font-weight: 500 !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+/* --- Banner başlık ve alt yazı --- */
+.display-4 {
+    font-size: 4rem !important;
+}
+
+.lead {
+    font-size: 1.3rem !important;
+    font-weight: 400 !important;
+}
+
+/* --- Sayfa başlıkları ve metin boşlukları --- */
+.page-item-title, h1.page-title {
+    margin-bottom: 1.5rem !important;
+    margin-top: 1rem !important;
+}
+
+.page-content h2 {
+    margin-top: 2rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.page-content p {
+    margin-bottom: 1rem !important;
+    line-height: 1.8 !important;
 }
