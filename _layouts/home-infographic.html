@@ -5,7 +5,8 @@ layout: page
 <div class="row">
   <div class="col-md-8">
     {% include index/description.html %}
-    {% include index/carousel.html title="Koleksiyondan Seçmeler" %}
+    {% include index/featured-terms.html field="padisah_donemi" title="Öne Çıkan Dönemler" btn-color="primary" max=5 %}
+{% include index/featured-terms.html field="muellif_adi" title="Öne Çıkan Müellifler" btn-color="primary" max=5 %}
   </div>
   <div class="col-md-4">  
     {% include index/time.html %}
