@@ -3,7 +3,6 @@
 # Jekyll Digital Collection Generator, designed for GitHub Pages
 # https://github.com/CollectionBuilder/collectionbuilder-gh
 ##########
-
 ##########
 # URL VARIABLES [optional if using GitHub Pages!]
 #
@@ -15,7 +14,6 @@
 #baseurl: /collectionbuilder-gh 
 # location of code, the full url to your github repository
 source-code: https://github.com/CollectionBuilder/collectionbuilder-gh
-
 ##########
 # SITE SETTINGS
 #
@@ -28,28 +26,24 @@ tagline: Babinger'in Osmanlı Tarih Yazarları ve Eserleri adlı çalışmasın�
 description: "Tevârih, Franz Babinger'in Osmanlı Tarih Yazarları ve Eserleri (Geschichtsschreiber der Osmanen und ihre Werke) adlı eserini temel alan dijital bir katalog çalışmasıdır. Koleksiyon, eserde yer alan müellifler ve eserlerine ilişkin verileri; yazma nüshaların bulunduğu kütüphane bilgileriyle birlikte bir araya getirmektedir"
 # creator of the digital collection, to appear in meta tags; we typically use our GitHub usernames but feel free to just use your name
 author: DBB-M-Tevarih
-
 ##########
 # COLLECTION SETTINGS
 #
 # Set the metadata for your collection (the name of the csv file in your _data directory that describes the objects in your collection) 
 # Use the filename of your CSV **without** the ".csv" extension! E.g. _data/demo-babinger_cb.csv --> "demo-babinger_cb"
 metadata: babinger_cb
-
 ##########
 # Site/Organization Branding 
 #   Uncomment these and enter information for your organization (replacing the CDIL links and name below) if you'd like to brand your site with a logo
 #
 organization-name: "Marmara Üniversitesi Dijital Beşeri Bilimler Araştırma Merkezi"
 organization-link: https://dbb.marmara.edu.tr/
-organization-logo-nav: /assets/img/logo.png
-
+# organization-logo-nav: /assets/img/logo.png
 ##########
 # ROBOTS EXCLUDE
 #
 # set noindex to true if you do NOT want Google to index your site
 # noindex: true 
-
 ##########
 # BUILD SETTINGS 
 #
