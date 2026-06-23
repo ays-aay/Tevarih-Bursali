@@ -1,5 +1,8 @@
 field,display_name
-title,Title
-date,Date
-description,Description
-subject,Subjects
+muellif_adi,Müellif Adı
+eser_adi,Eser Adı
+muellif_meslegi,Müellif Mesleği
+muellif_memleketi,Müellif Memleketi
+padisah_donemi,Padişah Dönemi
+telif_tarih,Telif Tarihi
+eser_dili,Eser Dili
