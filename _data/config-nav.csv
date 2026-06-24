@@ -1,5 +1,12 @@
 display_name,stub,dropdown_parent
 Anasayfa,/,
 Keşfet,/browse.html,
+Tarihçiler,/browse.html#fasil=Tarihçiler,
+Tabibler,/browse.html#fasil=Tabibler,
+Riyaziyeciler,/browse.html#fasil=Riyaziyeciler,
+Coğrafyacılar,/browse.html#fasil=Coğrafyacılar,
+Hal Tercemesi,/browse.html#fasil=Hal Tercemesi,
+14. Asır,/browse.html#fasil=14. Asır Muharrirleri,
+Derç Edilmemiş,/browse.html#fasil=Derç Edilmemiş,
+Sefaretnameler,/browse.html#fasil=Sefaretnameler,
 Hakkında,/about.html,
-Yöntem,/yontem.html,
