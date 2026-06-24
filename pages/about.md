@@ -2,7 +2,7 @@
 title: Hakkında
 layout: about
 permalink: /about.html
-credits: true
+credits: false
 ---
 
 ## Osmanlı-Türkiye Kaynakları: Dijital Veri Tabanı ve Analiz Projesi (DBB-M-KAYNAK)
