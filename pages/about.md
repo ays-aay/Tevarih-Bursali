@@ -1,8 +1,11 @@
 ---
 title: Hakkında
-layout: page
+layout: about
 permalink: /about.html
+credits: true
 ---
+
+{% include feature/nav-menu.html sections="Osmanlı-Türkiye Kaynakları: Dijital Veri Tabanı ve Analiz Projesi (DBB-M-KAYNAK);Mehmed Tâhir (ö.1925);Koleksiyon Hakkında;Yöntem;Teşekkür" %}
 
 ## Osmanlı-Türkiye Kaynakları: Dijital Veri Tabanı ve Analiz Projesi (DBB-M-KAYNAK)
 
@@ -28,25 +31,37 @@ Proje için ilk aşamada üç temel kaynak türü seçilmiştir: **Tevârih** (O
 [(DBB-M-Hatırât) Osmanlı'dan Cumhuriyete Hatırât Eserleri](https://dbb-m.github.io/Hatirat/) — Yürütücü: Rümeysanur Doğan
 
 ---
-## Tevarih Veri Tabanı: Babinger Derlemesi
 
-Franz Babinger'in *Osmanlı Tarih Yazarları ve Eserleri* (1927), yayımlanmasının üzerinden bir asra yakın zaman geçmiş olmasına karşın Osmanlı tarih yazımı araştırmalarında başvurulan temel eserlerden biri olmayı sürdürmektedir. Bununla birlikte eserin sınırlılıkları literatürde çokça tartışılmıştır: müellif biyografilerindeki eksiklikler, kütüphane bilgilerindeki hatalar, İstanbul dışındaki koleksiyonlara duyulan ilginin İstanbul nüshalarının gözden kaçmasına yol açması, Türkçe çevirisinin elli yılı aşkın bir gecikmeyle ve güncel literatürle desteklenmeksizin yayımlanmış olması bu eleştirilerin başında gelmektedir. Bu çalışma söz konusu eleştirilerin farkındadır. Tevarih, Babinger'in derleme eserine dayanır; bu nedenle siteyi araştırmalarında kullanacakların ilgili eserleri yazma eser kütüphanelerinde ve literatürde takip etmesi beklenmektedir.
+## Mehmed Tâhir (ö.1925)
 
-Bu çalışmanın amacı Babinger'i yeniden değerlendirmek veya eksikliklerini tamamlamak değildir. Çalışmanın temel hedefi, Marmara Üniversitesi Dijital Beşeri Bilimler Araştırma Merkezi bünyesinde araştırmacı ve stajyerlerle birlikte yürütülen bir süreç olarak, Babinger'in metnini yapılandırılmış ve sorgulanabilir bir veri setine dönüştürmek; böylece tematik envanterlerin oluşturulmasına ve dijital beşeri bilimler yöntemleriyle interaktif analizler yapılmasına zemin hazırlamaktır.
+<div style="float: right; margin: 0 0 1em 2em; max-width: 280px;">
+<img src="/Tevarih-Bursali/assets/img/tahir.jpg" alt="Bursalı Mehmed Tâhir" style="width: 100%; border: 3px solid #D4A017;">
+</div>
 
-Osmanlı tarih yazımı alanında tematik taranabilir korpusların henüz oluşturulmamış olmasının önündeki engellerden biri, tematik envanterlerin de aynı ölçüde eksik kalmasıdır. Tevarih bu boşluktan hareketle tasarlanmıştır: bir kaynak seçilmiş, o kaynak üzerinden sistematik bir envanter deneyi yapılmış ve bunun etkileşimli bir platforma nasıl taşınabileceği gösterilmiştir.
+Bursalı Mehmed Tâhir, 22 Kasım 1861'de Bursa'da doğdu. Harbiye'yi tamamlayarak askerlik mesleğine giren Tâhir, Manastır'da coğrafya ve tarih öğretmenliği, Selânik'te ise Askerî Rüşdiye müdürlüğü görevlerinde bulundu. Genç yaşlardan itibaren tasavvufa ilgi duyan Tâhir, Melâmî tarikatına intisap ederek bu çevreyle derin bağlar kurdu. Manastır yıllarında başladığı biyografi ve bibliyografya çalışmalarını, sonraki görev yerleri olan İzmir ve Aydın bölgelerinde sürdürdü; mezar taşlarını inceleyerek ve kütüphaneleri dolaşarak unutulmaya yüz tutmuş müellif ve eserleri ilim dünyasına kazandırdı.
 
-Buradaki soru şudur: Derlem olan bir kaynak, sistematik bir envantere ve etkileşimli bir platforma dönüştürüldüğünde, tematik korpus çalışmaları için bir yöntem oluşturabilir mi? Tevarih — yani Osmanlı tarih yazımı geleneği — bu soruyu sınamak için nasıl bir potansiyel taşır? Bu web sitesi, bu soruların yöntemsel bir deneme alanı olarak kurgulanmıştır.
+1908'den itibaren Bursa milletvekili sıfatıyla Meclis-i Meb'ûsan'da yer aldı. Bu dönemde İstanbul kütüphanelerinin zengin koleksiyonlarına erişim imkânı buldu; 1914'te yarbaylıktan emekli olarak tamamen ilmî çalışmalarına yöneldi. Yirmi yılı aşkın bir emeğin ürünü olan ve üç cilt halinde 1915-1924 yılları arasında yayımlanan Osmanlı Müellifleri, 1691 müellifin biyografisini ve eserlerini sistematik biçimde bir araya getiren kapsamlı bir biyobiblyografik ansiklopedidir. Hayatını Osmanlı ilim ve kültür mirasının araştırılmasına adayan Bursalı Tâhir, 28 Ekim 1925'te İstanbul'da vefat etti; Üsküdar'da Aziz Mahmud Hüdâyî Dergâhı hazîresine defnedildi.
 
-1389'dan 1925'e uzanan yaklaşık beş asırlık bir zaman dilimine ait 630 eser, 418 müellif ve 20 ülkedeki 194 kütüphaneyi kapsayan bu veri tabanı; Marmara Üniversitesi Dijital Beşeri Bilimler Araştırma Merkezi bünyesinde araştırmacılar ve Tevarih çalışma grubu stajyerleriyle birlikte oluşturulmuştur.
+<div style="clear: both;"></div>
 
-"Tevarih" kavramı DİA'da Osmanlı Devleti'nin kuruluşundan başlayarak yazılan belirli bir tarih türünün ortak adı olarak tanımlanmaktadır. Bu çalışmada kavram daha geniş tutulmuş; Babinger'in tarih ve tarih yazımı odaklı derlemi esas alındığından, bu tanımı aşan pek çok tür ve eser de kapsama dahil edilmiştir.
+---
 
-Kullanıcılar eserleri ve müellifleri keşfedebilir, yazma nüshalarının dağılımını harita üzerinde izleyebilir, telif tarihlerini kronolojik olarak okuyabilir ve veri setini farklı formatlarda indirebilir. Bu işlevsellik, Tevarih'i yalnızca bir katalog değil, Osmanlı tarih yazımına ilişkin tematik ve mekânsal sorular sorulabilecek araştırmaya açık bir altyapı haline getirmektedir.
+## Koleksiyon Hakkında
+
+Bu koleksiyon, Bursalı Mehmed Tâhir'in Osmanlı Müellifleri adlı eserinin 3. cildindeki Tarihçiler faslını temel almaktadır. Eser; Osmanlı Devleti'nin kuruluşundan 20. yüzyıl başlarına kadar yetişmiş Türk müelliflerini mesleki sınıflara göre ele alan kapsamlı bir biyografik ve bibliyografik kaynaktır.
+
+Mehmed Tâhir, tarih eserlerinin yanı sıra şiir, roman ve piyes gibi farklı türlerdeki eserleri de kayıt altına aldığından, yalnızca tarih yazımıyla ilgili eserler ayrı bir şekilde listeye alınmış; diğer eserler ilgili fasıllarda veya ilave notlar sütununda not edilmiştir. Bir müellifin aynı anda birden fazla kimliğe sahip olması nedeniyle bazı fıkhî eserlerin sınıflandırılması güçleşmiş ve bu eserler listeye dahil edilmiştir.
+
+Anlatım üslubundaki tutarsızlıklar da veri aktarımını zorlaştırmıştır. Yazar kimi müellifleri bir veya iki paragraf metin içinde anlatırken, kimilerini liste halinde aktarmakta; eser adlarını ve müellif isimlerini zaman zaman kısaltmakta; bir esere ilişkin bilgiyi parçalı biçimde farklı yerlere serpiştirmektedir. Kütüphane bilgileri çoğunlukla eksik ve muğlak olup koleksiyon numarası nadiren verilmektedir.
+
+En verimli sütunlar müellif adı, eser adı ve ilave notlar olurken; istinsah tarihi, müstensih adı, istinsah yeri, koleksiyon/kayıt no, yazı türü ve eser alt türü sütunları büyük ölçüde boş kalmıştır. Koleksiyonda Mehmed Tâhir'in özgün transkripsiyonu dönem imlasıyla birlikte korunmuştur.
+
+---
+
+
+---
 
 ## Teşekkür
-
-Bu koleksiyon, Marmara Üniversitesi Dijital Beşeri Bilimler Araştırma Merkezi'nde, aşağıda adı geçen araştırmacı ve stajyerlerden oluşan ekibin çalışmalarıyla hazırlanmıştır:
 
 - Ahmet Tekin
 - Necmettin Semiz
