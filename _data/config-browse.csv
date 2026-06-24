@@ -1,4 +1,5 @@
 field,display_name,btn
+fasil,Fasıl,true
 muellif_adi,Müellif Adı,true
 eser_adi,Eser Adı,true
 muellif_meslegi,Müellif Mesleği,true
